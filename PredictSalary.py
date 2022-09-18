@@ -17,6 +17,7 @@ y = salary_data.Salary.to_numpy()
 X = X.reshape(X.shape[0], 1)
 y = y.reshape(y.shape[0], 1)
 
+# Fit the model to the dataset
 bgd_regressor = bgd.BGDLinearRegressor()
 bgd_regressor.fit(X, y, learning_rate=0.01, n_iterations=1000)
 
@@ -27,7 +28,7 @@ prediction = bgd_regressor.predict(X_model)
 plt.plot(X_model, prediction, "r-")
 plt.plot(X, y, "b.")
 plt.title('Adjustment of the linear model')
-plt.legend(['Adjusted linear model', 'Test data'])
+plt.legend(['Adjusted linear model', 'Dataset'])
 plt.xlabel('Years of experience')
 plt.ylabel('Salary')
 plt.show()
