@@ -26,9 +26,10 @@ prediction = bgd_regressor.predict(X_model)
 # Plot the model
 plt.plot(X_model, prediction, "r-")
 plt.plot(X, y, "b.")
-#plt.axis([0, 2, 0, 15])
 plt.title('Adjustment of the linear model')
-#plt.legend(['Adjusted linear model', 'Test data'])
+plt.legend(['Adjusted linear model', 'Test data'])
+plt.xlabel('Years of experience')
+plt.ylabel('Salary')
 plt.show()
 
 # Calculate the root-mean-square error of the original data
